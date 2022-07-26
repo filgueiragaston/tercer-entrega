@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #977028; }
+  body h1 {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 2.3rem;
+    text-shadow: 2px 2px #d97e7e; }
+    body h1 a {
+      text-decoration: none; }
+  body ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    justify-content: center; }
+  body li {
+    background-color: #f2ecec;
+    width: 100px;
+    padding: 0.4rem;
+    margin: 0.4rem;
+    border-radius: 5px 5px 5px 5px;
+    font-weight: bold;
+    box-shadow: 2px 2px black;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center; }
+    body li a {
+      text-decoration: none; }
+  body header a {
+    text-decoration: none; }
+
+.logo {
+  display: none; }
+
+.parrafo1 {
+  display: none; }
+
+.mainIndex {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.3fr 1fr 0.5fr;
+  grid-template-areas: "img1" "parrafo2" "img2" "parrafo3" "footer";
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center; }
+
+.img1 {
+  margin-top: 1rem;
+  grid-area: img1; }
+
+.img2 {
+  margin-top: 1rem;
+  grid-area: img2; }
+
+.parrafo2 {
+  grid-area: parrafo2;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  margin-left: 1rem;
+  font-weight: bold; }
+
+.parrafo3 {
+  grid-area: parrafo3;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  margin-left: 1rem;
+  font-weight: bold; }
+
+.parrafo4 {
+  display: none; }
+
+footer {
+  grid-area: footer; }
+  footer h2 {
+    text-align: center; }
+
+@media screen and (min-width: 1024px) {
+  .mainIndex {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: none;
+    grid-template-areas: "img1 parrafo2" "img2 parrafo3" "footer footer";
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center; }
+  .img {
+    grid-area: img1; }
+  .parrafo2 {
+    grid-area: parrafo2; }
+  .img2 {
+    grid-area: img2; }
+  footer {
+    grid-area: footer; } }
