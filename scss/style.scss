@@ -1,6 +1,6 @@
 //variables
-$color-principal: rgb(223, 177, 199);
-$color-li: rgb(242, 236, 236) ;
+$color-principal: rgb(204, 178, 127);
+$color-li: rgb(217, 204, 204) ;
 
 *{
     margin: 0;
@@ -110,7 +110,27 @@ footer{
 
 
 
+
+.mainImagenes{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: none;
+    grid-template-areas: "imagen1"
+                         "imagen2"
+                         "imagen3"
+                         "imagen4"
+                         "video1"
+                         "video2"
+                         "footer";
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+
 @media screen and (min-width:1024px){
+    /* media querie index principal */
     .mainIndex{
         display: grid;
         grid-template-columns: none;
@@ -132,5 +152,42 @@ footer{
     footer{
         grid-area: footer;
     }
-   
+    /* media querie index imagenes */
+   .mainImagenes{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "imagen1 imagen2"
+                         "imagen3 imagen4"
+                         "video1 video2"
+                         "footer footer";
+                         .imagen1{
+                            grid-area: imagen1;
+                            margin-right: 5rem;
+                        }
+                        .imagen2{
+                            grid-area: imagen2;
+                            margin-left: 5rem;
+                        }
+                        .imagen3{
+                            grid-area: imagen3;
+                            margin-right: 5rem;
+                        }
+                        .imagen4{
+                            grid-area: imagen4;
+                            margin-left: 5rem;
+                        }
+                        .video1{
+                            grid-area: video1;
+                            margin-right: 5rem;
+                            margin-top: 5rem;
+                        }
+                        .video2{
+                            grid-area: video2;
+                            margin-left: 5rem;
+                            margin-top: 5rem;
+                        }
+   }
 }
+
+
