@@ -134,6 +134,30 @@ footer{
     align-content: center;
 }
 
+/* INDEX UBICACION */
+.real{
+        justify-content: center;
+        justify-items: center;
+        align-content: center;
+        align-items: center;
+}
+main{
+    .mapa{
+        margin: 30px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    p{
+        justify-content: center;
+        justify-items: center;
+        align-content: center;
+        align-items: center;
+        margin-left: 1rem;
+        font-weight: bold;
+    }
+}
+
 
 @media screen and (min-width:1024px){
     /* media querie index principal */
