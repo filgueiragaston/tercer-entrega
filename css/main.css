@@ -118,27 +118,17 @@ footer {
   justify-content: center;
   align-content: center; }
   .mainImagenes .imagen1 {
-    border: black 5px dashed;
-    padding: 20px;
     margin-top: 20px; }
   .mainImagenes .imagen2 {
-    border: black 5px dashed;
-    padding: 20px;
     margin-top: 20px; }
   .mainImagenes .imagen3 {
-    border: black 5px dashed;
-    padding: 20px;
     margin-top: 20px; }
   .mainImagenes .imagen4 {
-    border: black 5px dashed;
-    padding: 20px;
     margin-top: 20px; }
   .mainImagenes .video1 {
-    border: black 5px dashed;
-    padding: 20px; }
+    margin-top: 1.2rem; }
   .mainImagenes .video2 {
-    border: black 5px dashed;
-    padding: 20px; }
+    margin-top: 1.2rem; }
 
 /* INDEX UBICACION */
 .real {
