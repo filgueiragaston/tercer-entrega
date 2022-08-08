@@ -1,16 +1,27 @@
+@import "base/variables";
+@import "base/mixin";
+@import "base/listas";
 //variables
 $color-principal: rgb(204, 178, 127);
 $color-li: rgb(217, 204, 204) ;
-
+/* reset */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+footer{
+    margin-bottom: 2rem;
+}
 /* INDEX PRINCIPAL */
 body{
     background-color: $color-principal;
+    text-align: center;
+    .titulo{
+        display: none;
+    }
     h1{
+        color: nth($list: $colores-font, $n: 3);
         margin-bottom: 1rem;
         text-align: center;
         font-size: 2.3rem;
@@ -23,21 +34,18 @@ body{
     ul{
         list-style: none;
         display: flex;
+        flex-direction: row !important;
         gap: 10px;
         justify-content: center;
     }
     li{
         background-color: $color-li;
         width: 100px;
-        padding: 0.4rem;
-        margin: 0.4rem;
+        margin: 0.5rem;
         border-radius: 5px 5px 5px 5px;
         font-weight: bold;
         box-shadow: 2px 2px black;
-        justify-content: center;
-        justify-items: center;
-        align-items: center;
-        align-content: center;
+        @include justify;
         a{
             text-decoration: none;
 
@@ -47,21 +55,29 @@ body{
         a{
             text-decoration: none;
         }
+        .dropdown-menu{
+            --bs-dropdown-link-hover-bg: transparent;
+            --bs-dropdown-border-color: none;
+            background-color: transparent;
+        }
     }
 }
-h1:hover{
-    transform: scale(1.3);
-}
+/* arreglos en el navbar */
+.header .navbar {
+    position: sticky;
+    background-color: transparent !important;
+  }
+  .navbar-brand{
+    font-weight: bold;
+  }
+  
 li:hover{
     transform: scale(1.2);
 }
+main{
+    align-items: center;
+}
 
-.logo{
-    display: none;
-}
-.parrafo1{
-    display: none;
-}
 .mainIndex{
     display: grid;
     grid-template-columns: 1fr;
@@ -71,20 +87,19 @@ li:hover{
                          "img2"
                          "parrafo3"
                          "footer";
-    justify-content: center;
-    justify-items: center;
-    align-content: center;
-    align-items: center;
+    justify-content: space-between;
 }
 .img1{
-    margin-top: 1rem;
+    margin-top: 0.3rem;
     grid-area: img1;
 }
 .img2{
-    margin-top: 1rem;
+    margin-top: 5rem;
     grid-area: img2;
 }
 .parrafo2{
+    border: black 5px dashed;
+    padding: 1rem;
     grid-area: parrafo2;
     justify-content: center;
     justify-items: center;
@@ -94,7 +109,10 @@ li:hover{
     font-weight: bold;
 }
 .parrafo3{
+    border: black 5px dashed;
+    padding: 1rem;
     grid-area: parrafo3;
+    margin-top: 5rem;
     justify-content: center;
     justify-items: center;
     align-content: center;
@@ -102,15 +120,13 @@ li:hover{
     margin-left: 1rem;
     font-weight: bold;
 }
-.parrafo4{
-    display: none;
-    
-}
 footer{
     grid-area: footer;
-    h2{
-        text-align: center;
-    }
+    justify-content: space-around;
+    margin-top: 3rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 
@@ -132,7 +148,39 @@ footer{
     justify-items: center;
     justify-content: center;
     align-content: center;
+    .imagen1{
+        border: black 5px dashed;
+        padding: 20px;
+        margin-top: 20px;
+    }
+    .imagen2{
+        border: black 5px dashed;
+        padding: 20px;
+        margin-top: 20px;
+    }
+    .imagen3{
+        border: black 5px dashed;
+        padding: 20px;
+        margin-top: 20px;
+    }
+    .imagen4{
+        border: black 5px dashed;
+        padding: 20px;
+        margin-top: 20px;
+    }
+    .video1{
+        border: black 5px dashed;
+        padding: 20px;
+        
+    }
+    .video2{
+        border: black 5px dashed;
+        padding: 20px;
+       
+    }
 }
+
+
 
 /* INDEX UBICACION */
 .real{
@@ -148,30 +196,78 @@ main{
         display: flex;
         justify-content: center;
     }
-    p{
+    .parrafoUbi{
+        border: black 5px dashed;
+        padding: 0.5rem;
         justify-content: center;
         justify-items: center;
         align-content: center;
         align-items: center;
-        margin-left: 1rem;
         font-weight: bold;
+    }
+    .divUbi{
+        width: 100%;
     }
 }
 
+/* INDEX HISTORIA */
+main{
+    .content2{
+        margin-top: 40px;
+    }
+    .nos{
+        font-weight: bold;
+        padding: 1rem;
+        border: black 5px dashed;
+    }
+}
+
+/* INDEX CONTACTO */
+main{
+    display: flex;
+    flex-direction: column;
+    .imgContact{
+        display: flex;
+        justify-content: center;
+    }
+    section{
+        padding: 0.5rem;
+        border: black 5px dashed;
+    }
+    .formu{
+        width: 400px;
+    }
+    .divContact{
+        margin: 2rem;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    form{
+        margin: 1rem;
+        width: 350px;
+        padding: 1rem;
+        border: black 5px dashed;
+        .label2{
+            width: 325px;
+        }
+    }
+    .real{
+        display: flex;
+        justify-content: center;
+    }
+}
 
 @media screen and (min-width:1024px){
     /* media querie index principal */
     .mainIndex{
         display: grid;
+        justify-content: space-around;
         grid-template-columns: none;
         grid-template-rows: none;
         grid-template-areas: "img1 parrafo2"
                              "img2 parrafo3"
                              "footer footer";
-        justify-content: center;
-        justify-items: center;
-        align-content: center;
-        align-items: center;
     }
     .img{
         grid-area: img1;
@@ -181,12 +277,20 @@ main{
     }
     footer{
         grid-area: footer;
+        justify-content: space-between;
+    }
+    .parrafo2{
+        text-align: center;
+    }
+    .parrafo3{
+        text-align: center;
+        margin-left: 2rem;
     }
     /* media querie index imagenes */
    .mainImagenes{
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 0.2fr;
     grid-template-areas: "imagen1 imagen2"
                          "imagen3 imagen4"
                          "video1 video2"
@@ -218,6 +322,64 @@ main{
                             margin-top: 5rem;
                         }
    }
+   /*INDEX NOSOTROS/HISTORIA MEDIA Ls*/
+   .mainNos{
+    display: grid;
+    margin-top: 30px;
+    grid-template-columns: auto;
+    grid-template-areas: auto;
+    grid-template-areas: "content content2"
+                         "content content2";
+    .content{
+        display: flex;
+        align-items: center;
+        grid-area: content;
+        width: 45%;
+    }
+    .content2{
+        grid-area: content2;
+        width: 50%;
+    }
+    .textoNos{
+        display: flex;
+        justify-content: space-around;
+    }
+   }
+   /* INDEX CONTACTO */
+   .mainCon{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "h1Cont h1Cont"
+                         "form imgContact"
+                         "divContact imgContact"
+                         "footer footer";
+    .h1Cont{
+        grid-area: h1Cont;
+    }
+    form{
+        margin-left: 190px;
+        grid-area: form;
+    }
+    .divContact{
+        grid-area: divContact;
+    }
+    .imgContact{
+        grid-area: imgContact;
+    }
+    footer{
+        grid-area: footer;
+    }
+   }
+   /*INDEX UBICACION*/
+   .divUbi{
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+   }
+
 }
 
 
