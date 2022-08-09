@@ -34,13 +34,12 @@ body{
     ul{
         list-style: none;
         display: flex;
-        flex-direction: row !important;
-        gap: 10px;
+        flex-direction: row !important;  
         justify-content: center;
     }
     li{
         background-color: $color-li;
-        width: 100px;
+        width: 90px;
         margin: 0.5rem;
         border-radius: 5px 5px 5px 5px;
         font-weight: bold;
@@ -100,24 +99,24 @@ main{
 .parrafo2{
     border: black 5px dashed;
     padding: 1rem;
+    margin: 1rem;
     grid-area: parrafo2;
     justify-content: center;
     justify-items: center;
     align-content: center;
     align-items: center;
-    margin-left: 1rem;
     font-weight: bold;
 }
 .parrafo3{
     border: black 5px dashed;
     padding: 1rem;
+    margin: 1rem;
     grid-area: parrafo3;
     margin-top: 5rem;
     justify-content: center;
     justify-items: center;
     align-content: center;
     align-items: center;
-    margin-left: 1rem;
     font-weight: bold;
 }
 footer{
@@ -186,7 +185,8 @@ main{
     }
     .parrafoUbi{
         border: black 5px dashed;
-        padding: 0.5rem;
+        padding: 1rem;
+        margin: 1rem;
         justify-content: center;
         justify-items: center;
         align-content: center;
@@ -206,6 +206,7 @@ main{
     .nos{
         font-weight: bold;
         padding: 1rem;
+        margin: 1rem;
         border: black 5px dashed;
     }
 }
