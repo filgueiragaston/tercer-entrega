@@ -1,3 +1,6 @@
+.parrafo2, .parrafo3, main .parrafoUbi, main section, main form {
+  border: black 5px dashed; }
+
 /* reset */
 * {
   margin: 0;
@@ -60,14 +63,12 @@ main {
   grid-area: img2; }
 
 .parrafo2 {
-  border: black 5px dashed;
   padding: 1rem;
   margin: 1rem;
   grid-area: parrafo2;
   font-weight: bold; }
 
 .parrafo3 {
-  border: black 5px dashed;
   padding: 1rem;
   margin: 1rem;
   grid-area: parrafo3;
@@ -122,7 +123,6 @@ main .mapa {
   justify-content: center; }
 
 main .parrafoUbi {
-  border: black 5px dashed;
   padding: 1rem;
   margin: 1rem;
   font-weight: bold; }
@@ -148,8 +148,7 @@ main {
     display: flex;
     justify-content: center; }
   main section {
-    padding: 0.5rem;
-    border: black 5px dashed; }
+    padding: 0.5rem; }
   main .formu {
     width: 400px; }
   main .divContact {
@@ -158,10 +157,9 @@ main {
     font-size: 1.5rem;
     font-weight: bold; }
   main form {
-    margin: 1rem;
     width: 350px;
     padding: 1rem;
-    border: black 5px dashed; }
+    margin: 1rem; }
     main form .label2 {
       width: 325px; }
   main .real {

@@ -1,6 +1,7 @@
 @import "base/variables";
 @import "base/mixin";
 @import "base/listas";
+@import "base/extend";
 /* reset */
 *{
     margin: 0;
@@ -78,16 +79,14 @@ main{
     grid-area: img2;
 }
 .parrafo2{
-    border: black 5px dashed;
-    padding: 1rem;
-    margin: 1rem;
+    @extend %marcos;
+    @include medidas-marpad(1rem, 1rem);
     grid-area: parrafo2;
     font-weight: $estilo-fuentes;
 }
 .parrafo3{
-    border: black 5px dashed;
-    padding: 1rem;
-    margin: 1rem;
+    @extend %marcos;
+    @include medidas-marpad(1rem, 1rem);
     grid-area: parrafo3;
     margin-top: 5rem;
     font-weight: $estilo-fuentes;
@@ -158,13 +157,11 @@ main{
     .mapa{
         margin: 30px;
         padding: 20px;
-        display: flex;
-        justify-content: center;
+        @include justify
     }
     .parrafoUbi{
-        border: black 5px dashed;
-        padding: 1rem;
-        margin: 1rem;
+        @extend %marcos;
+        @include medidas-marpad(1rem, 1rem);
         font-weight: $estilo-fuentes;
     }
     .divUbi{
@@ -179,8 +176,7 @@ main{
     }
     .nos{
         font-weight: $estilo-fuentes;
-        padding: 1rem;
-        margin: 1rem;
+        @include medidas-marpad(1rem, 1rem);
         border: black 5px dashed;
     }
 }
@@ -195,7 +191,7 @@ main{
     }
     section{
         padding: 0.5rem;
-        border: black 5px dashed;
+        @extend %marcos;
     }
     .formu{
         width: 400px;
@@ -207,10 +203,9 @@ main{
         font-weight: bold;
     }
     form{
-        margin: 1rem;
         width: 350px;
-        padding: 1rem;
-        border: black 5px dashed;
+        @include medidas-marpad(1rem, 1rem);
+        @extend %marcos;
         .label2{
             width: 325px;
         }
