@@ -4,3 +4,8 @@
     align-items: center;
     align-content: center;
 }
+
+@mixin medidas($padding, $margin){
+    padding: $padding;
+    margin: $margin;
+}
