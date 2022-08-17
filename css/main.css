@@ -51,7 +51,11 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 0.3fr 1fr 0.5fr;
-  grid-template-areas: "img1" "parrafo2" "img2" "parrafo3" "footer";
+  grid-template-areas: "img1"
+ "parrafo2"
+ "img2"
+ "parrafo3"
+ "footer";
   justify-content: space-between; }
 
 .img1 {
@@ -89,7 +93,13 @@ footer {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: none;
-  grid-template-areas: "imagen1" "imagen2" "imagen3" "imagen4" "video1" "video2" "footer";
+  grid-template-areas: "imagen1"
+ "imagen2"
+ "imagen3"
+ "imagen4"
+ "video1"
+ "video2"
+ "footer";
   align-items: center;
   justify-items: center;
   justify-content: center;
@@ -174,7 +184,9 @@ main {
     justify-content: space-around;
     grid-template-columns: none;
     grid-template-rows: none;
-    grid-template-areas: "img1 parrafo2" "img2 parrafo3" "footer footer"; }
+    grid-template-areas: "img1 parrafo2"
+ "img2 parrafo3"
+ "footer footer"; }
   .img {
     grid-area: img1; }
   .img2 {
@@ -192,7 +204,10 @@ main {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 1fr 1fr 1fr 0.2fr;
-    grid-template-areas: "imagen1 imagen2" "imagen3 imagen4" "video1 video2" "footer footer"; }
+    grid-template-areas: "imagen1 imagen2"
+ "imagen3 imagen4"
+ "video1 video2"
+ "footer footer"; }
     .mainImagenes .imagen1 {
       grid-area: imagen1;
       margin-right: 5rem; }
@@ -219,7 +234,8 @@ main {
     margin-top: 30px;
     grid-template-columns: auto;
     grid-template-areas: auto;
-    grid-template-areas: "content content2" "content content2"; }
+    grid-template-areas: "content content2"
+ "content content2"; }
     .mainNos .content {
       display: flex;
       align-items: center;
@@ -236,7 +252,10 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "h1Cont h1Cont" "form imgContact" "divContact imgContact" "footer footer"; }
+    grid-template-areas: "h1Cont h1Cont"
+ "form imgContact"
+ "divContact imgContact"
+ "footer footer"; }
     .mainCon .h1Cont {
       grid-area: h1Cont; }
     .mainCon form {
@@ -255,3 +274,57 @@ main {
     flex-direction: row;
     justify-content: space-around;
     align-items: center; } }
+
+
+    img.img-2{
+      width: 100%;
+      padding: 1rem;
+    }
+    img#imagenIndex1{
+      padding: 1rem;
+      width: 100%;
+    }
+
+    .navbar-collapse{
+      justify-content: center;
+      display: flex;
+      width: 100%;
+    }
+    li.nav-item{
+      width: 75px;
+    }
+    a.nav-link{
+      font-size: .9rem;
+      color: black;
+    }
+    .mainImagenes .imagen1 img{
+      padding: 1rem;
+      width: 100%;
+    }
+    .mainImagenes .imagen2 img{
+      padding: 1rem;
+      width: 100%;
+    }
+    .mainImagenes .imagen3 img{
+      padding: 1rem;
+      width: 100%;
+    }
+    .mainImagenes .imagen4 img{
+      padding: 1rem;
+      width: 100%;
+    }
+    main .imgContact img{
+      width: 100%;
+      padding: 1rem;
+    }
+    @media screen and (max-width:400px){
+    .video1 > iframe{
+     width: 350px; 
+    }
+    .video2 > iframe{
+      width: 350px; 
+     }
+     iframe.map{
+       width: 350px;
+     }
+  }
