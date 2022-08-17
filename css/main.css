@@ -56,7 +56,8 @@ main {
 
 .img1 {
   margin-top: 0.3rem;
-  grid-area: img1; }
+  grid-area: img1;
+  max-width: 100%; }
 
 .img2 {
   margin-top: 5rem;
